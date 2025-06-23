@@ -32,7 +32,30 @@ body {
   min-height: 100vh;
 }
 
-.page-header {
+.skip-link {
+  position: absolute;
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  line-height: 1;
+  font-size: 1.25rem;
+  background-color: var(--paynes-grey);
+  color: var(--white);
+}
+
+.skip-link:not(:focus) {
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  white-space: nowrap;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+}
+
+main:focus {
+  outline: none;
+}
+
+.page-header__content {
   display: flex;
   align-items: center;
   justify-content: space-between;
